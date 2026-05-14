@@ -39,37 +39,6 @@
   document.body.style.overflow = 'hidden';
 })();
 
-/* ── Custom Cursor ─────────────────────────────────────────── */
-(function initCursor() {
-  const outer = document.getElementById('cursor-outer');
-  const inner = document.getElementById('cursor-inner');
-  if (!outer || !inner) return;
-
-  let mx = 0, my = 0, ox = 0, oy = 0;
-  let raf;
-
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-
-  function lerp(a, b, t) { return a + (b - a) * t; }
-
-  function tick() {
-    ox = lerp(ox, mx, 0.14);
-    oy = lerp(oy, my, 0.14);
-    outer.style.left = ox + 'px';
-    outer.style.top  = oy + 'px';
-    inner.style.left = mx + 'px';
-    inner.style.top  = my + 'px';
-    raf = requestAnimationFrame(tick);
-  }
-  raf = requestAnimationFrame(tick);
-
-  const hoverEls = document.querySelectorAll('a, button, .product-card, .feature-item, .brand-chip, .step-card, .testimonial-card, .t-nav-btn');
-  hoverEls.forEach(el => {
-    el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-    el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-  });
-})();
-
 /* ── Navbar Scroll ─────────────────────────────────────────── */
 (function initNavbar() {
   const navbar = document.getElementById('navbar');
