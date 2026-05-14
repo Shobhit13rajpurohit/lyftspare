@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LyftSpare — Your Lift. Our Expertise.</title>
+  <meta name="description" content="Premium elevator & lift spare parts. Trusted by 1200+ maintenance companies worldwide. OEM-grade components, fast delivery, expert support." />
+  <link rel="icon" type="image/jpeg" href="assets/img/logo.jpeg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ── Loader ──────────────────────────────────────────── -->
+  <div id="loader">
+    <div class="loader-logo">LYFTSPARE</div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+    <div class="loader-text">Initialising systems…</div>
+  </div>
+
+  <!-- ── Custom Cursor ───────────────────────────────────── -->
+  <div id="cursor-outer"></div>
+  <div id="cursor-inner"></div>
+
+  <!-- ── Scroll to Top ───────────────────────────────────── -->
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <div class="nav-logo-icon">
+        <img src="assets/img/logo.jpeg" alt="LyftSpare" style="width:100%;height:100%;object-fit:cover;border-radius:6px;" />
+      </div>
+      LYFT<span>SPARE</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#how-it-works">Process</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact" class="nav-cta">Get Quote</a></li>
+    </ul>
+
+    <div class="hamburger" role="button" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav">
+    <a href="#products">Products</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#how-it-works">Process</a>
+    <a href="#brands">Brands</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#contact">Get a Quote →</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-img"></div>
+    <div class="hero-grid"></div>
+    <canvas id="particles-canvas" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
+
+    <!-- 3D Floating Gear SVG -->
+    <div class="hero-gear-3d" aria-hidden="true">
+      <!-- Outer Gear -->
+      <svg class="gear-svg-wrap" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="gearGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%"   stop-color="#e84b0e" stop-opacity="0.22"/>
+            <stop offset="100%" stop-color="#e84b0e" stop-opacity="0.04"/>
+          </radialGradient>
+          <linearGradient id="teethGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%"  stop-color="#ff6d33" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#e84b0e" stop-opacity="0.3"/>
+          </linearGradient>
+        </defs>
+        <!-- Outer rim circles -->
+        <circle cx="220" cy="220" r="200" stroke="rgba(232,75,14,0.08)" stroke-width="1"/>
+        <circle cx="220" cy="220" r="180" stroke="rgba(232,75,14,0.06)" stroke-width="0.5"/>
+        <!-- Gear teeth — 14 teeth -->
+        <g fill="url(#teethGrad)" stroke="rgba(232,75,14,0.4)" stroke-width="0.5">
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(0   220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(25.7 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(51.4 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(77.1 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(102.8 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(128.5 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(154.2 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(180 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(205.7 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(231.4 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(257.1 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(282.8 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(308.5 220 220)"/>
+          <rect x="208" y="10"  width="24" height="44" rx="3" transform="rotate(334.2 220 220)"/>
+        </g>
+        <!-- Main disc -->
+        <circle cx="220" cy="220" r="155" fill="url(#gearGrad)" stroke="rgba(232,75,14,0.25)" stroke-width="1.5"/>
+        <!-- Spokes -->
+        <g stroke="rgba(232,75,14,0.2)" stroke-width="1">
+          <line x1="220" y1="80" x2="220" y2="360"/>
+          <line x1="80" y1="220" x2="360" y2="220"/>
+          <line x1="117" y1="117" x2="323" y2="323"/>
+          <line x1="323" y1="117" x2="117" y2="323"/>
+        </g>
+        <!-- Inner ring -->
+        <circle cx="220" cy="220" r="90" fill="rgba(8,11,15,0.7)" stroke="rgba(232,75,14,0.35)" stroke-width="1.5"/>
+        <!-- Bolt holes -->
+        <g fill="rgba(232,75,14,0.3)">
+          <circle cx="220" cy="140" r="5"/>
+          <circle cx="220" cy="300" r="5"/>
+          <circle cx="140" cy="220" r="5"/>
+          <circle cx="300" cy="220" r="5"/>
+          <circle cx="163" cy="163" r="5"/>
+          <circle cx="277" cy="277" r="5"/>
+          <circle cx="277" cy="163" r="5"/>
+          <circle cx="163" cy="277" r="5"/>
+        </g>
+        <!-- Center hub -->
+        <circle cx="220" cy="220" r="30" fill="rgba(232,75,14,0.15)" stroke="rgba(232,75,14,0.5)" stroke-width="1.5"/>
+        <circle cx="220" cy="220" r="14" fill="rgba(232,75,14,0.3)" stroke="rgba(232,75,14,0.7)" stroke-width="1"/>
+      </svg>
+
+      <!-- Inner contra-rotating gear -->
+      <div class="gear-inner-wrap">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <g fill="rgba(232,75,14,0.18)" stroke="rgba(232,75,14,0.35)" stroke-width="0.5">
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(0   100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(30  100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(60  100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(90  100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(120 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(150 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(180 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(210 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(240 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(270 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(300 100 100)"/>
+            <rect x="93" y="5"  width="14" height="24" rx="2" transform="rotate(330 100 100)"/>
+          </g>
+          <circle cx="100" cy="100" r="68" fill="rgba(8,11,15,0.5)" stroke="rgba(232,75,14,0.2)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="30" fill="rgba(232,75,14,0.1)" stroke="rgba(232,75,14,0.4)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="12" fill="rgba(232,75,14,0.25)" stroke="rgba(232,75,14,0.6)" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Certified OEM-Grade Spare Parts
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line"><span class="word">PRECISION</span></span>
+        <span class="line"><span class="word">PARTS FOR</span></span>
+        <span class="line"><span class="word-gold">EVERY LIFT</span></span>
+      </h1>
+
+      <p class="hero-subtitle">
+        India's most trusted source for elevator and lift spare parts. OEM-grade quality, 10,000+ SKUs, same-day dispatch and dedicated technical support.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Browse Catalogue</span>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+          <span>Request Quote</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <!-- <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">10,000<span style="font-size:18px">+</span></div>
+        <div class="hero-stat-label">SKUs In Stock</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">1,200<span style="font-size:18px">+</span></div>
+        <div class="hero-stat-label">Companies Served</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">24hr</div>
+        <div class="hero-stat-label">Average Dispatch</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">18<span style="font-size:18px">yrs</span></div>
+        <div class="hero-stat-label">Industry Expertise</div>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MARQUEE
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- items duplicated for seamless loop -->
+      <div class="marquee-item"><span class="marquee-dot"></span>Control Panels</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Safety Gear</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Drive Systems</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Guide Rails</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Door Operators</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Traction Machines</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Buffer Springs</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Encoder Units</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Rope & Sheaves</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>VVVF Drives</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Landing Panels</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Brake Systems</div>
+      <!-- duplicate -->
+      <div class="marquee-item"><span class="marquee-dot"></span>Control Panels</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Safety Gear</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Drive Systems</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Guide Rails</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Door Operators</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Traction Machines</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Buffer Springs</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Encoder Units</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Rope & Sheaves</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>VVVF Drives</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Landing Panels</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Brake Systems</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PRODUCTS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="products">
+    <div class="section-container section-pad">
+      <div class="products-header">
+        <div class="reveal">
+          <div class="section-label">Product Range</div>
+          <h2 class="section-title">PARTS THAT<br/>NEVER FAIL</h2>
+        </div>
+        <div class="reveal delay-2">
+          <p class="section-subtitle">Every component meets or exceeds OEM specifications. Sourced from certified manufacturers, tested to last.</p>
+        </div>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Featured card -->
+        <div class="product-card featured reveal delay-1">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&auto=format&fit=crop&q=70" alt="Control Panels" loading="lazy"/>
+            <div class="product-card-badge">Best Seller</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-icon">🎛️</div>
+            <div class="product-card-title">Control Panels & PCBs</div>
+            <p class="product-card-desc">Microprocessor-based lift controllers, relay logic panels, and PCB boards compatible with all major OEM brands. Pre-programmed and plug-and-play ready.</p>
+            <div class="product-card-footer">
+              <span class="product-card-count">340+ SKUs</span>
+              <div class="product-card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card reveal delay-2">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&auto=format&fit=crop&q=70" alt="Drive Systems" loading="lazy"/>
+            <div class="product-card-badge">High Demand</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-icon">⚙️</div>
+            <div class="product-card-title">VVVF Drive Systems</div>
+            <p class="product-card-desc">Variable voltage variable frequency drives for smooth ride quality and energy efficiency. Compatible with Otis, Schindler, Kone and more.</p>
+            <div class="product-card-footer">
+              <span class="product-card-count">180+ SKUs</span>
+              <div class="product-card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card reveal delay-3">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1581093458791-9d42e3c2fd47?w=600&auto=format&fit=crop&q=70" alt="Safety Components" loading="lazy"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-icon">🛡️</div>
+            <div class="product-card-title">Safety Components</div>
+            <p class="product-card-desc">Speed governors, safety gears, overspeed switches, buffer assemblies — all CE certified and compliant with IS 14665 standards.</p>
+            <div class="product-card-footer">
+              <span class="product-card-count">290+ SKUs</span>
+              <div class="product-card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card reveal delay-2">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1609741199744-b43b57e31c88?w=600&auto=format&fit=crop&q=70" alt="Door Operators" loading="lazy"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-icon">🚪</div>
+            <div class="product-card-title">Door Operators & Locks</div>
+            <p class="product-card-desc">Complete door operator assemblies, landing door locks, door couplers, rollers, and guides for all major car and landing door systems.</p>
+            <div class="product-card-footer">
+              <span class="product-card-count">510+ SKUs</span>
+              <div class="product-card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card reveal delay-3">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&auto=format&fit=crop&q=70" alt="Traction Machines" loading="lazy"/>
+            <div class="product-card-badge">New Stock</div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-icon">🔧</div>
+            <div class="product-card-title">Traction Machines</div>
+            <p class="product-card-desc">Geared and gearless traction machines, including permanent magnet synchronous motors (PMSM) for modern MRL elevator systems.</p>
+            <div class="product-card-footer">
+              <span class="product-card-count">95+ SKUs</span>
+              <div class="product-card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card reveal delay-4">
+          <div class="product-card-img">
+            <img src="https://images.unsplash.com/photo-1518709911915-712d5fd04677?w=600&auto=format&fit=crop&q=70" alt="Hydraulic Parts" loading="lazy"/>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-icon">💧</div>
+            <div class="product-card-title">Hydraulic Parts</div>
+            <p class="product-card-desc">Hydraulic power units, valves, cylinders, seals and oil for hydraulic lift systems used in car parks, factories and low-rise buildings.</p>
+            <div class="product-card-footer">
+              <span class="product-card-count">220+ SKUs</span>
+              <div class="product-card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /products-grid -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       STATS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="stats-section">
+    <div class="section-container">
+      <div class="stats-grid">
+        <div class="stat-card reveal delay-1">
+          <div class="stat-number"><span data-count="10000">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Parts In Catalogue</div>
+          <div class="stat-desc">Ready to ship within 24 hours from our Mumbai warehouse</div>
+        </div>
+        <div class="stat-card reveal delay-2">
+          <div class="stat-number"><span data-count="1200">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Customers Worldwide</div>
+          <div class="stat-desc">Maintenance companies, OEMs and contractors trust us</div>
+        </div>
+        <div class="stat-card reveal delay-3">
+          <div class="stat-number"><span data-count="18">0</span><span class="stat-suffix">yrs</span></div>
+          <div class="stat-label">Industry Experience</div>
+          <div class="stat-desc">Deep technical knowledge of every major elevator system</div>
+        </div>
+        <div class="stat-card reveal delay-4">
+          <div class="stat-number"><span data-count="98">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">On-Time Delivery</div>
+          <div class="stat-desc">Industry-leading logistics partners across India and globally</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       WHY US
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="why-us">
+    <div class="section-container section-pad-lg">
+      <div class="why-grid">
+        <!-- Image column -->
+        <div class="why-image-wrap reveal-left">
+          <div class="why-image-main">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=70" alt="Engineer at work" loading="lazy"/>
+          </div>
+          <div class="why-image-overlay">
+            <div class="why-overlay-num">18+</div>
+            <div class="why-overlay-label">Years of certified industrial expertise in elevator systems</div>
+          </div>
+          <div class="why-img-badge">
+            <span>🏆 ISO 9001:2015 Certified</span>
+          </div>
+        </div>
+
+        <!-- Content column -->
+        <div class="reveal-right">
+          <div class="section-label">Why LyftSpare</div>
+          <h2 class="section-title">BUILT ON<br/>TRUST &amp;<br/>PRECISION</h2>
+          <p class="section-subtitle">
+            We don't just supply parts — we keep lifts running safely. Every component in our catalogue has been validated by our in-house engineering team and is backed by a warranty.
+          </p>
+
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-icon">✅</div>
+              <div>
+                <div class="feature-title">OEM-Grade Quality Assurance</div>
+                <p class="feature-desc">All parts sourced directly from authorised manufacturers or tested to match OEM specifications. Zero compromise on safety-critical components.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🚀</div>
+              <div>
+                <div class="feature-title">Same-Day Express Dispatch</div>
+                <p class="feature-desc">Orders placed before 2 PM are dispatched same day. Pan-India delivery in 24–72 hours with real-time tracking on every shipment.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🔬</div>
+              <div>
+                <div class="feature-title">Expert Technical Support</div>
+                <p class="feature-desc">Our team of certified lift engineers is available 6 days a week to help you identify the right part, diagnose faults and troubleshoot remotely.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">💰</div>
+              <div>
+                <div class="feature-title">Transparent Volume Pricing</div>
+                <p class="feature-desc">Competitive trade pricing with tiered discounts for AMC companies. No hidden charges. Dedicated account managers for regular buyers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="how-it-works">
+    <div class="section-container section-pad">
+      <div style="text-align:center;" class="reveal">
+        <div class="section-label" style="justify-content:center;">Our Process</div>
+        <h2 class="section-title">FROM ENQUIRY<br/>TO INSTALLATION</h2>
+        <p class="section-subtitle" style="margin:0 auto 0;">Parts in your hands in as little as 24 hours — a streamlined process designed for professionals.</p>
+      </div>
+
+      <div class="steps-container">
+        <div class="step-card reveal delay-1">
+          <div class="step-number">01</div>
+          <div class="step-title">Submit Your Enquiry</div>
+          <p class="step-desc">Send us your lift make, model, and the part number or description. Use our online form, WhatsApp or email — whichever is fastest for you.</p>
+        </div>
+        <div class="step-card reveal delay-2">
+          <div class="step-number">02</div>
+          <div class="step-title">Get a Quote Fast</div>
+          <p class="step-desc">Our team reviews your request and sends back a detailed quote with part availability, pricing and lead time — usually within 2 hours.</p>
+        </div>
+        <div class="step-card reveal delay-3">
+          <div class="step-number">03</div>
+          <div class="step-title">Confirm &amp; Pay</div>
+          <p class="step-desc">Approve the quote and pay via NEFT, UPI, credit card or on account (for registered customers). Instant order confirmation issued.</p>
+        </div>
+        <div class="step-card reveal delay-4">
+          <div class="step-number">04</div>
+          <div class="step-title">Receive &amp; Install</div>
+          <p class="step-desc">Parts dispatched same day or next morning. You get tracking details immediately. Technical install support included if required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       BRANDS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="brands">
+    <div class="section-container section-pad">
+      <p class="brands-title reveal">Compatible with all major elevator brands</p>
+      <div class="brands-row reveal delay-1">
+        <div class="brand-chip">Otis</div>
+        <div class="brand-chip">Schindler</div>
+        <div class="brand-chip">KONE</div>
+        <div class="brand-chip">ThyssenKrupp</div>
+        <div class="brand-chip">Mitsubishi</div>
+        <div class="brand-chip">Fujitec</div>
+        <div class="brand-chip">Sigma</div>
+        <div class="brand-chip">Toshiba</div>
+        <div class="brand-chip">Orona</div>
+        <div class="brand-chip">Wittur</div>
+        <div class="brand-chip">Fermator</div>
+        <div class="brand-chip">STEP</div>
+        <div class="brand-chip">Yaskawa</div>
+        <div class="brand-chip">Vacon</div>
+        <div class="brand-chip">Johnson</div>
+        <div class="brand-chip">BLT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="testimonials">
+    <div class="section-container section-pad">
+      <div class="testimonials-header reveal">
+        <div class="section-label" style="justify-content:center;">Customer Reviews</div>
+        <h2 class="section-title">TRUSTED BY<br/>PROFESSIONALS</h2>
+        <p class="section-subtitle">Over 1,200 elevator maintenance companies rely on LyftSpare for the parts that keep their lifts running safely every day.</p>
+      </div>
+
+      <div class="testimonials-track-wrap reveal delay-1">
+        <div class="testimonials-track">
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">LyftSpare saved us on a critical breakdown. The VVVF drive arrived overnight and their engineer walked us through the installation over the phone. Zero downtime for our client.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">👷</div>
+              <div>
+                <div class="testimonial-name">Rajesh Nair</div>
+                <div class="testimonial-role">MD, Apex Elevator Services, Mumbai</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">We manage AMC contracts for 400+ lifts across Delhi NCR. LyftSpare gives us the volume pricing and same-day dispatch we need to stay profitable and responsive.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">👨‍💼</div>
+              <div>
+                <div class="testimonial-name">Priya Sharma</div>
+                <div class="testimonial-role">Operations Head, LiftCare India, Delhi</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">I've been sourcing parts from LyftSpare for 6 years. Their catalogue is unmatched — even for obsolete models I struggle to find elsewhere. Genuine quality every time.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">🔧</div>
+              <div>
+                <div class="testimonial-name">Suresh Kumar</div>
+                <div class="testimonial-role">Senior Technician, Skyrise Lifts, Bangalore</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">Their technical team identified the exact encoder fault from our description and had the replacement part couriered before we'd even sent the formal PO. That's the level of service we need.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">🏗️</div>
+              <div>
+                <div class="testimonial-name">Amir Khan</div>
+                <div class="testimonial-role">Facility Manager, Prestige Group, Hyderabad</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">The pricing transparency alone sets them apart. No hidden charges, no last-minute surprises. We've standardised our entire procurement process around LyftSpare.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">📋</div>
+              <div>
+                <div class="testimonial-name">Deepa Menon</div>
+                <div class="testimonial-role">Procurement Lead, Kairali Elevators, Kochi</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="testimonials-nav">
+        <button class="t-nav-btn" id="t-prev" aria-label="Previous">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="t-dots">
+          <div class="t-dot active"></div>
+          <div class="t-dot"></div>
+          <div class="t-dot"></div>
+        </div>
+        <button class="t-nav-btn" id="t-next" aria-label="Next">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="cta-banner">
+    <div class="section-container">
+      <div class="cta-inner">
+        <h2 class="cta-title reveal">Need a part <em>today?</em><br/>We'll have it<br/>to you tomorrow.</h2>
+        <div class="cta-actions reveal delay-2">
+          <a href="#contact" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.0 2.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            <span>Call Us Now</span>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <span>Send Enquiry</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-container section-pad">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">LET'S FIND<br/>YOUR PART</h2>
+          <p class="section-subtitle">
+            Tell us what you need and our team will respond within 2 hours with availability and pricing. No obligation.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon">📞</div>
+              <div>
+                <div class="contact-card-title">Phone / WhatsApp</div>
+                <div class="contact-card-val">+91 98200 00000</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div>
+                <div class="contact-card-title">Email</div>
+                <div class="contact-card-val">sales@lyftspare.com</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div>
+                <div class="contact-card-title">Warehouse</div>
+                <div class="contact-card-val">MIDC Andheri East, Mumbai, Maharashtra 400 093</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">🕐</div>
+              <div>
+                <div class="contact-card-title">Business Hours</div>
+                <div class="contact-card-val">Mon–Sat, 9 AM – 7 PM IST</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="reveal-right delay-2">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="f-name">Your Name</label>
+                <input type="text" id="f-name" name="name" placeholder="Rajesh Nair" required />
+              </div>
+              <div class="form-field">
+                <label for="f-company">Company</label>
+                <input type="text" id="f-company" name="company" placeholder="Apex Elevators" />
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="f-phone">Phone / WhatsApp</label>
+                <input type="tel" id="f-phone" name="phone" placeholder="+91 98200 00000" required />
+              </div>
+              <div class="form-field">
+                <label for="f-email">Email Address</label>
+                <input type="email" id="f-email" name="email" placeholder="rajesh@example.com" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-brand">Lift Brand / Model</label>
+              <select id="f-brand" name="brand">
+                <option value="" disabled selected>Select brand…</option>
+                <option>Otis</option>
+                <option>Schindler</option>
+                <option>KONE</option>
+                <option>ThyssenKrupp</option>
+                <option>Mitsubishi</option>
+                <option>Fujitec</option>
+                <option>Johnson</option>
+                <option>BLT</option>
+                <option>Other / Unknown</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="f-part">Part Name / Number</label>
+              <input type="text" id="f-part" name="part" placeholder="e.g. VVVF Drive OVF20CR, Control Board PCB…" required />
+            </div>
+            <div class="form-field">
+              <label for="f-message">Additional Details</label>
+              <textarea id="f-message" name="message" placeholder="Quantity required, urgency, fault description, photos — anything that helps us respond faster…"></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span>Send Enquiry</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="section-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <div class="nav-logo-icon" style="width:34px;height:34px;">
+              <img src="assets/img/logo.jpeg" alt="LyftSpare" style="width:100%;height:100%;object-fit:cover;border-radius:5px;"/>
+            </div>
+            LYFT<span>SPARE</span>
+          </div>
+          <p>India's most trusted supplier of elevator and lift spare parts. OEM-grade quality, nationwide delivery, expert support since 2007.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-btn" aria-label="WhatsApp">W</a>
+            <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+            <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">Control Panels</a></li>
+            <li><a href="#products">VVVF Drives</a></li>
+            <li><a href="#products">Safety Components</a></li>
+            <li><a href="#products">Door Operators</a></li>
+            <li><a href="#products">Traction Machines</a></li>
+            <li><a href="#products">Hydraulic Parts</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why-us">About Us</a></li>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Careers</a></li>
+            <li><a href="#contact">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Get a Quote</a></li>
+            <li><a href="#contact">Track Order</a></li>
+            <li><a href="#contact">Returns Policy</a></li>
+            <li><a href="#contact">Technical Help</a></li>
+            <li><a href="#contact">Bulk Orders</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 LyftSpare. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></span>
+        <span style="color:var(--text-muted);">YOUR LIFT. OUR EXPERTISE.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
