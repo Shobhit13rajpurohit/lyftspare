@@ -29,9 +29,12 @@
 
     if (progress >= 100) {
       setTimeout(() => {
-        loader.classList.add('hidden');
-        document.body.style.overflow = '';
-        revealInit();
+        loader.classList.add('open');
+        setTimeout(() => {
+          loader.classList.add('hidden');
+          document.body.style.overflow = '';
+          revealInit();
+        }, 1000); // Wait for door animation to finish
       }, 400);
     }
   }, 80);
@@ -223,7 +226,7 @@ function initCounters() {
       requestAnimationFrame(step);
       io.unobserve(el);
     });
-  }, { threshold: 0.5 });
+  }, { rootMargin: "-40% 0px -50% 0px" });
 
   counters.forEach(c => io.observe(c));
 }
@@ -455,3 +458,4 @@ window.addEventListener('DOMContentLoaded', () => {
   style.textContent = `.nav-links a.active-nav { color: var(--gold) !important; } .nav-links a.active-nav::after { width: 100% !important; }`;
   document.head.appendChild(style);
 });
+

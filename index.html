@@ -13,15 +13,18 @@
 </head>
 <body>
 
+
   <!-- ── Loader ──────────────────────────────────────────── -->
   <div id="loader">
-    <div class="loader-logo">LYFTSPARE</div>
-    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
-    <div class="loader-text">Initialising systems…</div>
+    <div class="elevator-door elevator-door-left"></div>
+    <div class="elevator-door elevator-door-right"></div>
+    <div class="loader-content">
+      <div class="loader-logo">LYFTSPARE</div>
+      <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+      <div class="loader-text">Initialising systems…</div>
+    </div>
   </div>
 
-  <!-- ── Scroll to Top ───────────────────────────────────── -->
-  <button id="scroll-top" aria-label="Scroll to top">↑</button>
 
   <!-- ═══════════════════════════════════════════════════════
        NAVBAR
@@ -58,7 +61,7 @@
   <!-- ═══════════════════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════════════════════ -->
-  <section id="hero">
+  <section id="hero" data-floor="G" class="elevator-section">
     <div class="hero-bg-img"></div>
     <div class="hero-grid"></div>
     <canvas id="particles-canvas" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
@@ -232,7 +235,7 @@
   <!-- ═══════════════════════════════════════════════════════
        PRODUCTS
   ═══════════════════════════════════════════════════════════ -->
-  <section id="products">
+  <section id="products" data-floor="1" class="elevator-section">
     <div class="section-container section-pad">
       <div class="products-header">
         <div class="reveal">
@@ -394,7 +397,7 @@
   <!-- ═══════════════════════════════════════════════════════
        WHY US
   ═══════════════════════════════════════════════════════════ -->
-  <section id="why-us">
+  <section id="why-us" data-floor="2" class="elevator-section">
     <div class="section-container section-pad-lg">
       <div class="why-grid">
         <!-- Image column -->
@@ -457,7 +460,7 @@
   <!-- ═══════════════════════════════════════════════════════
        HOW IT WORKS
   ═══════════════════════════════════════════════════════════ -->
-  <section id="how-it-works">
+  <section id="how-it-works" data-floor="3" class="elevator-section">
     <div class="section-container section-pad">
       <div style="text-align:center;" class="reveal">
         <div class="section-label" style="justify-content:center;">Our Process</div>
@@ -493,7 +496,7 @@
   <!-- ═══════════════════════════════════════════════════════
        BRANDS
   ═══════════════════════════════════════════════════════════ -->
-  <section id="brands">
+  <section id="brands" data-floor="4" class="elevator-section">
     <div class="section-container section-pad">
       <p class="brands-title reveal">Compatible with all major elevator brands</p>
       <div class="brands-row reveal delay-1">
@@ -520,7 +523,7 @@
   <!-- ═══════════════════════════════════════════════════════
        TESTIMONIALS
   ═══════════════════════════════════════════════════════════ -->
-  <section id="testimonials">
+  <section id="testimonials" data-floor="5" class="elevator-section">
     <div class="section-container section-pad">
       <div class="testimonials-header reveal">
         <div class="section-label" style="justify-content:center;">Customer Reviews</div>
@@ -639,7 +642,7 @@
   <!-- ═══════════════════════════════════════════════════════
        CONTACT
   ═══════════════════════════════════════════════════════════ -->
-  <section id="contact">
+  <section id="contact" data-floor="6" class="elevator-section">
     <div class="section-container section-pad">
       <div class="contact-grid">
         <div class="contact-info reveal-left">
@@ -816,6 +819,9 @@
       <span class="fsm-text">WhatsApp</span>
     </a>
   </div>
+
+  </div> <!-- /#elevator-cabin -->
+</div> <!-- /#elevator-shaft -->
 
   <script src="assets/js/script.js"></script>
 </body>
